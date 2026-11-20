@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunger — Food, Fun & Flavor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">🍔</span> hunger<span class="dot">.</span></a>
+    <nav><a href="#menu">Menu</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <button class="cart-pill" onclick="openCart()">🛒 Cart <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">GOOD FOOD • GOOD MOOD</span>
+        <h1>Big cravings.<br><span>Little wait.</span></h1>
+        <p>Your favorites, freshly made and delivered straight to your happy place. Pick your treats and let the feast begin!</p>
+        <a class="primary-btn" href="#menu">Explore the menu ↓</a>
+        <div class="hero-badges"><span>✨ Fresh & tasty</span><span>💛 Made with love</span></div>
+      </div>
+      <div class="hero-art"><div class="blob"></div><div class="food-emoji">🍔</div><div class="floating f1">🍟</div><div class="floating f2">🥤</div><div class="floating f3">🍕</div><div class="sticker">YUM!<br>😋</div></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading"><div><span class="eyebrow">THE GOOD STUFF</span><h2>What are you craving?</h2></div><p>Tap + to add it to your cart</p></div>
+      <div class="filters" id="filters"></div>
+      <div class="menu-grid" id="menu-grid"></div>
+    </section>
+
+    <section class="about" id="about"><div class="about-icon">💛</div><div><h2>Made for your happy moments.</h2><p>From cheesy bites to sweet treats, choose your favorites and place your order in a few clicks.</p></div></section>
+  </main>
+
+  <footer id="contact"><div><a class="brand" href="#">🍔 hunger<span class="dot">.</span></a><p>Good food. Great mood.</p></div><div class="contact-links"><a href="mailto:muskansharma.2007123@gmail.com">✉️ Email us</a><a href="https://wa.me/917337802007" target="_blank" rel="noopener">💬 WhatsApp</a></div><small>© 2026 Hunger. Made with a little extra cheese 🧀</small></footer>
+
+  <div class="cart-overlay" id="cart-overlay" onclick="overlayClose(event)">
+    <aside class="cart-drawer" id="cart-drawer">
+      <div class="cart-head"><h2>Your munchies 🛒</h2><button class="close-btn" onclick="closeCart()">✕</button></div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-bottom">
+        <div class="bill-row"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+        <div class="bill-row"><span>Delivery</span><strong id="delivery">₹0</strong></div>
+        <div class="bill-row total"><span>Total bill</span><strong id="total">₹0</strong></div>
+        <button class="checkout-btn" onclick="checkout()">Place order via WhatsApp 💬</button>
+        <a class="email-order" href="mailto:muskansharma.2007123@gmail.com">Or contact by email ✉️</a>
+        <p class="checkout-note">WhatsApp will open with your order ready to send. Please confirm your delivery details in the message.</p>
+      </div>
+    </aside>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
